@@ -1,7 +1,7 @@
 
 {
-  "name": "My Ionic App",
-  "short_name": "My Ionic App",
+  "name": "SharedUseApp",
+  "short_name": "SharedUseApp",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{
