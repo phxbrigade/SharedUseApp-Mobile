@@ -1,7 +1,7 @@
 {
-  "name": "shareduseapp2",
+  "name": "shareduseapp",
   "version": "1.1.1",
-  "description": "SharedUseApp2: An Ionic project",
+  "description": "SharedUseApp: MCDPH Shared Use App.",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",
