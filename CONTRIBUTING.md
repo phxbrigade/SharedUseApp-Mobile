@@ -1,6 +1,6 @@
 # Contributing to Shared Use
 
-Your blood is the mortar that makes this community strong!
+Thank you! Your blood is the mortar that makes this community strong!
 
 ## Git Guidelines
 
@@ -38,8 +38,32 @@ That's it! First just add the files that you want to be part of your commit, the
 
 ### Pushing Code up to Github
 
-When you're ready for your code to leave your machine so others can bask in its greatness, you need to push it up to github:
+Your code is wonderful, and you're ready for others to bask in its greatness. But it doesn't do much good sitting on your machine. If you love something, set it free:
 
 ```
 git push origin shared-use-git-guide
 ```
+
+This will push all the commits that you've created up to the Github repo under the `shared-use-git-guide` branch. If you're collaborating with others you might do this often, but if you're working solo on a feature this might happen just before you create a pull request. What's that? Why, I'm glad you asked.
+
+### Creating a Pull Request
+
+Your feature is ready, and it's time to merge it into `dev`. Hooray! You're one step away from getting your code into the main development branch. Enter the pull request. There are two main ways to start one:
+
+1. After you push your code, you might see a yellow box on the main code screen with your branch and a Green "Compare & Pull Request". Click that button to start the pull request for that branch.
+2. On the main code screen, Click the "New Pull Request" Button.
+
+Once you're on the pull request screen, you'll see two dropdowns:
+- The first one is your "target" (which will usually be `dev`)
+- The second one is your "source" (in this case `shared-use-git-guide`).
+
+Select your source & destination, then assign it to one of the team leaders (info TBD) for review by using the selector on the right. If you like, you can also request other team members review your code to make sure everything looks ship-shape.
+
+Once folks have reviewed your code, they might request changes. To respond to these requests, simply commit and push new code up to your branch:
+
+```
+git commit -am "Doh! Taylor found a typo"
+git push origin shared-use-git-guide
+```
+
+Once your reviewers/assignees are satisfied, they'll hit the button to merge your code into `dev`, and you're done!
