@@ -67,3 +67,10 @@ git push origin shared-use-git-guide
 ```
 
 Once your reviewers/assignees are satisfied, they'll hit the button to merge your code into `dev`, and you're done!
+
+### Tips,Tricks and other Resources
+
+- [tig](https://jonas.github.io/tig/) is a great little command-line interface for managing commits.
+- [ohsh*tgit!](http://ohshitgit.com/) a mildly NSFW (language) guide for solutions when things go wrong.
+- There are tons of GUIs and integrations for all of your favorite editors. Experiment until you find what works for you.
+- [This Pull Request](https://github.com/phxbrigade/SharedUseApp/pulls/1) A link to the PR for this original git document.
