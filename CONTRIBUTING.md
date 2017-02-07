@@ -26,5 +26,20 @@ git checkout -b shared-use-git-guide
 Now you write your code just as before. When you're ready to save your progress, just commit:
 
 ```
+git add CONTRIBUTING.md
+git commit -m "Initial commit of Git Guide: first commit."
+```
 
+That's it! First just add the files that you want to be part of your commit, then run `git commit` to save them. You can (and should!) do this as often as you like while your branch is in development. Other variations:
+
+- `git commit` without the `-m` will open up your system's editor. Saving should complete the commit (for example, `:wq` will complete the commit in `vi`)
+- `git commit -a` will add all modified files to your commit
+- `git commit -am "My message"` Will add all modified files and complete the commit with "My Message" as the commit message
+
+### Pushing Code up to Github
+
+When you're ready for your code to leave your machine so others can bask in its greatness, you need to push it up to github:
+
+```
+git push origin shared-use-git-guide
 ```
