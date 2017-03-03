@@ -14,21 +14,33 @@
 
   <ion-side-menu side="left">
     <ion-header-bar class="bar-stable">
-      <h1 class="title">Left</h1>
+      <h1 class="title">Username</h1>
     </ion-header-bar>
     <ion-content>
       <ion-list>
-        <ion-item menu-close ng-click="login()">
+        <!--<ion-item menu-close ng-click="login()">
           Login
+        </ion-item>-->
+        <ion-item menu-close href="#/app/home">
+          Home
         </ion-item>
-        <ion-item menu-close href="#/app/search">
-          Search
+        <ion-item menu-close href="#/app/events">
+          Events
         </ion-item>
-        <ion-item menu-close href="#/app/browse">
-          Browse
+        <ion-item menu-close href="#/app/spaces">
+          Spaces
         </ion-item>
-        <ion-item menu-close href="#/app/playlists">
-          Playlists
+        <ion-item menu-close href="#/app/hosts">
+          Hosts
+        </ion-item>
+        <ion-item menu-close href="#/app/nearby">
+          Nearby
+        </ion-item>
+        <ion-item menu-close href="#/app/activity">
+          Activity
+        </ion-item>
+        <ion-item menu-close href="#/app/calendar">
+          Calendar
         </ion-item>
       </ion-list>
     </ion-content>
