@@ -13,7 +13,7 @@ sharedUseApp.appVersion = "0.1";
 // 'starter' is the name of this angular module (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers/login/loginControllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'homeControllers', 'eventsControllers', 'spacesControllers', 'hostsControllers', 'nearbyControllers', 'activityControllers', 'calendarControllers'])
+angular.module('starter', ['ionic', 'starter.controllers', 'homeControllers', 'eventsControllers', 'spacesControllers', 'hostsControllers', 'nearbyControllers', 'activityControllers'])
 
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -96,15 +96,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'homeControllers', 'e
           'menuContent': {
             templateUrl: 'templates/activity.html',
             controller: 'ActivityCtrl'
-          }
-        }
-      })
-      .state('app.calendar', {
-        url: '/calendar',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/calendar.html',
-            controller: 'CalendarCtrl'
           }
         }
       });
