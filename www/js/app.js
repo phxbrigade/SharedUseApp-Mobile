@@ -1,73 +1,105 @@
-// Ionic Starter App
+/* Shared Use App
+ * Maricopa County Department of Public Health
+ *
+ * Developed by:  Code For Phoenix
+ * Email:         codeforphx@gmail.com
+ */
+
+var sharedUseApp = {};
+sharedUseApp.baseURL = "http://localhost";
+sharedUseApp.appVersion = "0.1";
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
+// 'starter' is the name of this angular module (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-// 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
+// 'starter.controllers' is found in controllers/login/loginControllers.js
+angular.module('starter', ['ionic', 'starter.controllers', 'homeControllers', 'eventsControllers', 'spacesControllers', 'hostsControllers', 'nearbyControllers', 'activityControllers'])
 
-.run(function($ionicPlatform) {
-  $ionicPlatform.ready(function() {
-    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-    // for form inputs)
-    if (window.cordova && window.cordova.plugins.Keyboard) {
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-      cordova.plugins.Keyboard.disableScroll(true);
+  .run(function ($ionicPlatform) {
+    $ionicPlatform.ready(function () {
+      // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+      // for form inputs)
+      if (window.cordova && window.cordova.plugins.Keyboard) {
+        cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+        cordova.plugins.Keyboard.disableScroll(true);
 
-    }
-    if (window.StatusBar) {
-      // org.apache.cordova.statusbar required
-      StatusBar.styleDefault();
-    }
-  });
-})
-
-.config(function($stateProvider, $urlRouterProvider) {
-  $stateProvider
-
-    .state('app', {
-    url: '/app',
-    abstract: true,
-    templateUrl: 'templates/menu.html',
-    controller: 'AppCtrl'
+      }
+      if (window.StatusBar) {
+        // org.apache.cordova.statusbar required
+        StatusBar.styleDefault();
+      }
+    });
   })
 
-  .state('app.search', {
-    url: '/search',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/search.html'
-      }
-    }
-  })
+  .config(function ($stateProvider, $urlRouterProvider) {
+    $stateProvider
 
-  .state('app.browse', {
-      url: '/browse',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/browse.html'
+      .state('app', {
+        url: '/app',
+        abstract: true,
+        templateUrl: 'templates/menu.html',
+        controller: 'AppCtrl'
+      })
+      .state('app.login', {
+        url: '/login',
+        templateUrl: 'templates/login/login.html',
+        controller: 'LoginCtrl'
+      })
+      .state('app.home', {
+        url: '/home',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/home.html',
+            controller: 'HomeCtrl'
+          }
         }
-      }
-    })
-    .state('app.playlists', {
-      url: '/playlists',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
+      })
+      .state('app.events', {
+        url: '/events',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/events.html',
+            controller: 'EventsCtrl'
+          }
         }
-      }
-    })
+      })
+      .state('app.spaces', {
+        url: '/spaces',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/spaces.html',
+            controller: 'SpacesCtrl'
+          }
+        }
+      })
+      .state('app.hosts', {
+        url: '/hosts',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/hosts.html',
+            controller: 'HostsCtrl'
+          }
+        }
+      })
+      .state('app.nearby', {
+        url: '/nearby',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/nearby.html',
+            controller: 'NearbyCtrl'
+          }
+        }
+      })
+      .state('app.activity', {
+        url: '/activity',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/activity.html',
+            controller: 'ActivityCtrl'
+          }
+        }
+      });
 
-  .state('app.single', {
-    url: '/playlists/:playlistId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
-      }
-    }
+    // if none of the above states are matched, use this as the fallback
+    $urlRouterProvider.otherwise('/app/home');
   });
-  // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/search');
-});
