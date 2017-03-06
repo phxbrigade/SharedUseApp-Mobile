@@ -13,7 +13,7 @@ sharedUseApp.appVersion = "0.1";
 // 'starter' is the name of this angular module (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers/login/loginControllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'homeControllers', 'eventsControllers', 'spacesControllers', 'hostsControllers', 'nearbyControllers', 'activityControllers'])
+angular.module('starter', ['ionic', 'starter.controllers', 'homeControllers', 'eventsControllers', 'spacesControllers', 'hostsControllers', 'nearbyControllers', 'activityControllers', 'searchControllers'])
 
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -32,74 +32,78 @@ angular.module('starter', ['ionic', 'starter.controllers', 'homeControllers', 'e
   })
 
   .config(function ($stateProvider, $urlRouterProvider) {
-    $stateProvider
 
-      .state('app', {
-        url: '/app',
-        abstract: true,
-        templateUrl: 'templates/menu.html',
-        controller: 'AppCtrl'
-      })
-      .state('app.login', {
+    $stateProvider
+      .state('login', {
         url: '/login',
         templateUrl: 'templates/login/login.html',
         controller: 'LoginCtrl'
       })
-      .state('app.home', {
+      .state('menu', {
+        url: "/menu",
+        abstract: true,
+        templateUrl: "templates/menu.html"
+      })
+      // setup an abstract state for the tabs directive
+      .state('menu.dashboard', {
+        url: '/dashboard',
+        abstract: true,
+        views: {
+          'menuContent': {
+            templateUrl: "templates/tabs.html"
+          }
+        }
+      })
+      .state('menu.dashboard.home', {
         url: '/home',
         views: {
-          'menuContent': {
-            templateUrl: 'templates/home.html',
-            controller: 'HomeCtrl'
+          'dashboard-home': {
+            templateUrl: 'templates/dashboard/home.html',
+            controller: 'HomeTabCtrl'
           }
         }
       })
-      .state('app.events', {
-        url: '/events',
+      .state('menu.dashboard.search', {
+        url: '/search',
         views: {
-          'menuContent': {
-            templateUrl: 'templates/events.html',
-            controller: 'EventsCtrl'
+          'dashboard-search': {
+            templateUrl: 'templates/dashboard/search.html',
+            controller: 'SearchTabCtrl'
           }
         }
       })
-      .state('app.spaces', {
-        url: '/spaces',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/spaces.html',
-            controller: 'SpacesCtrl'
-          }
-        }
-      })
-      .state('app.hosts', {
-        url: '/hosts',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/hosts.html',
-            controller: 'HostsCtrl'
-          }
-        }
-      })
-      .state('app.nearby', {
-        url: '/nearby',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/nearby.html',
-            controller: 'NearbyCtrl'
-          }
-        }
-      })
-      .state('app.activity', {
+      .state('menu.dashboard.activity', {
         url: '/activity',
         views: {
-          'menuContent': {
-            templateUrl: 'templates/activity.html',
-            controller: 'ActivityCtrl'
+          'dashboard-activity': {
+            templateUrl: 'templates/dashboard/activity.html',
+            controller: 'ActivityTabCtrl'
           }
         }
+      })
+      .state('events', {
+        url: '/events',
+
+        templateUrl: 'templates/events.html',
+        controller: 'EventsCtrl'
+
+      })
+      .state('spaces', {
+        url: '/spaces',
+        templateUrl: 'templates/spaces.html',
+        controller: 'SpacesCtrl'
+      })
+      .state('hosts', {
+        url: '/hosts',
+        templateUrl: 'templates/hosts.html',
+        controller: 'HostsCtrl'
+      })
+      .state('nearby', {
+        url: '/nearby',
+        templateUrl: 'templates/nearby.html',
+        controller: 'NearbyCtrl'
       });
 
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/app/home');
+    $urlRouterProvider.otherwise('/login');
   });

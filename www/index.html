@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title></title>
+    <title>SharedUseApp</title>
 
     <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
     <!-- un-comment this code to enable service worker
     <script>
@@ -17,7 +18,11 @@
     </script>-->
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Your Custom app's CSS START-->
+    <link href="css/dashboardstyle.css" rel="stylesheet">
+    <link href="css/loginstyle.css" rel="stylesheet">
+    <!-- Your Custom app's CSS END-->
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
@@ -29,18 +34,22 @@
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
-    <!-- your app's js -->
+    <!-- Your Custom app's js START-->
     <script src="js/app.js"></script>
     <script src="js/controllers/login/loginControllers.js"></script>
-    <script src="js/controllers/homeControllers.js"></script>
+    <script src="js/controllers/dashboard/homeControllers.js"></script>
     <script src="js/controllers/eventsControllers.js"></script>
     <script src="js/controllers/spacesControllers.js"></script>
     <script src="js/controllers/hostsControllers.js"></script>
     <script src="js/controllers/nearbyControllers.js"></script>
-    <script src="js/controllers/activityControllers.js"></script>
+    <script src="js/controllers/dashboard/activityControllers.js"></script>
+    <script src="js/controllers/dashboard/searchControllers.js"></script>
+    <!-- Your Custom app's js END-->
   </head>
 
   <body ng-app="starter">
+    <!-- App Body START -->
     <ion-nav-view></ion-nav-view>
+    <!-- App Body END -->
   </body>
 </html>

@@ -9,7 +9,7 @@ angular.module('starter.controllers', [])
   })
 
   // Login based activities.
-  .controller('LoginCtrl', function ($scope, $ionicModal, $timeout) {
+  .controller('LoginCtrl', function ($scope, $ionicModal, $timeout, $state) {
     console.log('Loaded LoginCtrl');
 
     // With the new view caching in Ionic, Controllers are only called
@@ -31,7 +31,7 @@ angular.module('starter.controllers', [])
 
     // Triggered in the login modal to close it
     $scope.closeLogin = function () {
-      $scope.modal.hide();
+      $state.go("menu.dashboard.home");
     };
 
     // Open the login modal
