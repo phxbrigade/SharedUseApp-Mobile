@@ -5,9 +5,9 @@
  * Email:         codeforphx@gmail.com
  */
 
-var sharedUseApp = {};
-sharedUseApp.baseURL = "http://localhost";
-sharedUseApp.appVersion = "0.1";
+var sharedUseApp = {}
+sharedUseApp.baseURL = 'http://localhost'
+sharedUseApp.appVersion = '0.1'
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module (also set in a <body> attribute in index.html)
@@ -20,19 +20,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'homeControllers', 'e
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
       // for form inputs)
       if (window.cordova && window.cordova.plugins.Keyboard) {
-        cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-        cordova.plugins.Keyboard.disableScroll(true);
-
+        cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true)
+        cordova.plugins.Keyboard.disableScroll(true)
       }
       if (window.StatusBar) {
         // org.apache.cordova.statusbar required
-        StatusBar.styleDefault();
+        StatusBar.styleDefault()
       }
-    });
+    })
   })
 
   .config(function ($stateProvider, $urlRouterProvider) {
-
     $stateProvider
       .state('login', {
         url: '/login',
@@ -40,9 +38,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'homeControllers', 'e
         controller: 'LoginCtrl'
       })
       .state('menu', {
-        url: "/menu",
+        url: '/menu',
         abstract: true,
-        templateUrl: "templates/menu.html"
+        templateUrl: 'templates/menu.html'
       })
       // setup an abstract state for the tabs directive
       .state('menu.dashboard', {
@@ -50,7 +48,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'homeControllers', 'e
         abstract: true,
         views: {
           'menuContent': {
-            templateUrl: "templates/tabs.html"
+            templateUrl: 'templates/tabs.html'
           }
         }
       })
@@ -102,8 +100,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'homeControllers', 'e
         url: '/nearby',
         templateUrl: 'templates/nearby.html',
         controller: 'NearbyCtrl'
-      });
+      })
 
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/login');
-  });
+    $urlRouterProvider.otherwise('/login')
+  })
