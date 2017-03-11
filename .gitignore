@@ -7,3 +7,5 @@ plugins/cordova*
 plugins/ionic*
 plugins/phonegap*
 *.DS_store
+
+iconic.project
