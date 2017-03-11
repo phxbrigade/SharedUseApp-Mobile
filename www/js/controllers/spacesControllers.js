@@ -2,5 +2,4 @@
 
 angular.module('spacesControllers', [])
   .controller('SpacesCtrl', function ($scope, $ionicModal, $timeout) {
-    console.log("Loaded SpacesCtrl");
-  });
+  })
