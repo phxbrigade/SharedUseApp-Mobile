@@ -14,7 +14,7 @@ sharedUseApp.appVersion = '0.1'
 // 'starter' is the name of this angular module (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers/login/loginControllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'homeControllers', 'eventsControllers', 'spacesControllers', 'hostsControllers', 'nearbyControllers', 'activityControllers', 'searchControllers'])
+angular.module('starter', ['ionic', 'starter.controllers', 'homeControllers', 'communityEventsControllers', 'sitesControllers', 'nearbyControllers', 'activityControllers', 'searchControllers'])
 
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -80,22 +80,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'homeControllers', 'e
           }
         }
       })
-      .state('events', {
-        url: '/events',
+      .state('communityevents', {
+        url: '/communityevents',
 
-        templateUrl: 'templates/events.html',
-        controller: 'EventsCtrl'
+        templateUrl: 'templates/communityevents.html',
+        controller: 'communityEventsCtrl'
 
       })
-      .state('spaces', {
-        url: '/spaces',
-        templateUrl: 'templates/spaces.html',
-        controller: 'SpacesCtrl'
-      })
-      .state('hosts', {
-        url: '/hosts',
-        templateUrl: 'templates/hosts.html',
-        controller: 'HostsCtrl'
+      .state('sites', {
+        url: '/sites',
+        templateUrl: 'templates/sites.html',
+        controller: 'SitesCtrl'
       })
       .state('nearby', {
         url: '/nearby',
