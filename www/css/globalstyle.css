@@ -1,0 +1,16 @@
+/* Sets the app background to light gray */
+.pane {
+    background-color: #f7f3f3;
+}
+
+.item-text-center
+{
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    top: 0;
+    height: 100%;
+}

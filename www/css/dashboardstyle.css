@@ -1,3 +1,17 @@
 .dash-nearby-search {
   font-weight: bold;
 }
+
+.dash-card-font {
+  font-size: large;
+  opacity: 0.8;
+} 
+
+.dash-card {
+  height: 85px;
+}
+
+.dash-more-card {
+  text-align: -webkit-center;
+  margin-top: -65px !important;
+}
