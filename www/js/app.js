@@ -84,7 +84,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'homeControllers', 'c
         url: '/communityevents',
 
         templateUrl: 'templates/communityevents.html',
-        controller: 'communityEventsCtrl'
+        controller: 'CommunityEventsCtrl'
 
       })
       .state('sites', {

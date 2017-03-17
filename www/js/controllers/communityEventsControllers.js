@@ -1,5 +1,5 @@
 // Controllers related to community events goes here.
 
 angular.module('communityEventsControllers', [])
-  .controller('communityEventsCtrl', function ($scope, $ionicModal, $timeout) {
+  .controller('CommunityEventsCtrl', function ($scope, $ionicModal, $timeout) {
   })
