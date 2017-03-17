@@ -8,16 +8,19 @@ angular.module('homeControllers', [])
       {
         name: 'Event Site 1',
         type: 'School Playground',
-        img: 'img/no-image2.png'
+        img: 'img/no-image2.png',
+        address: 'Phoenix'
       },
       {
         name: 'Event Site 2',
         type: 'Sports Arena',
-        img: 'img/no-image1.png'
+        img: 'img/no-image1.png',
+        address: 'Scotsdale'
       },
       {
         name: 'Event Site 3',
-        type: 'Community Hall'
+        type: 'Community Hall',
+        address: 'Chandler'
       }
     ]
   })

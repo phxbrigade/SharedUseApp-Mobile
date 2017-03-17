@@ -37,9 +37,10 @@
         Nearby Community Sites
       </div>
       <a ng-repeat="site in sites | orderBy: 'name'" class="item item-thumbnail-left" href="#">
-        <img ng-src="{{site.img || 'img/no-image2.png'}}">
+        <img ng-src="{{site.img || 'img/no-image2.png'}}"/>
         <h2>{{site.name}}</h2>
         <p>{{site.type}}</p>
+        <p>{{site.address}}</p>
       </a>   
     </div>
     <!-- Event Lists END -->
