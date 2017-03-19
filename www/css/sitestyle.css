@@ -1,10 +1,16 @@
 .site-list {
-  height: 100px
+  height: 100px;
+  margin-top: 5px !important;
 }
 
 .event-item.ng-enter {
     -webkit-animation: fadeInLeft 1s;
     animation: fadeInLeft 1s;
+}
+
+.site-button-bar {
+  background-color: white;
+  margin-top: 1px;
 }
 
 .event-item.ng-enter-stagger {
