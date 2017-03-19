@@ -93,7 +93,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'homeControllers', 'c
         controller: 'SitesCtrl'
       })
       .state('siteDetails', {
-        url: '/site/:siteid',
+        url: '/site/:siteid/:sitename',
         templateUrl: 'templates/sitedetails.html',
         controller: 'SiteDetailsCtrl'
       })

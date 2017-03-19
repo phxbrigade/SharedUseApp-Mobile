@@ -1,4 +1,4 @@
-<ion-view view-title="Site Details">
+<ion-view view-title="{{siteName}}">
 
   <!-- Header START -->
   <ion-nav-view animation="slide-left-right">
@@ -12,8 +12,32 @@
 
   <!-- Spaces Body START -->
   <ion-content>
-    <h1>Site Details</h1>
-    <h2>Site Id: {{siteid}}</h2>
+    <!-- Calendar START -->
+    <div class="card" style="height: 300px">
+      <div class="item item-text-wrap">
+        Calendar container
+      </div>
+    </div>
+    <!-- Calendar END -->
+
+    <!-- Event Lists START -->
+    <div class="list">
+      <div class="item item-text-wrap text-center">
+        <b>Event List</b>
+      </div>
+      <a ng-repeat="site in sites | orderBy: 'name'" class="row item item-text-wrap site-list event-item" ng-href="">
+        <div class="col col-67">
+          <b>{{site.name}}</b><br>
+          <span>Event Type: {{site.type}}</span>
+        </div>
+        <div class="col">
+          <p>{{site.date}}</p>
+          <p>{{site.time}}</p>
+        </div>
+      </a>   
+    </div>
+    <!-- Event Lists END -->
+
   </ion-content>
   <!-- Spaces Body END -->
 
