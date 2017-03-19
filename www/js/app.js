@@ -54,7 +54,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'homeControllers', 'c
         }
       })
       .state('menu.dashboard.home', {
-        url: '/home',
+        url: '/',
         views: {
           'dashboard-home': {
             templateUrl: 'templates/dashboard/home.html',
@@ -91,6 +91,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'homeControllers', 'c
         url: '/sites',
         templateUrl: 'templates/sites.html',
         controller: 'SitesCtrl'
+      })
+      .state('siteDetails', {
+        url: '/site/:siteid',
+        templateUrl: 'templates/sitedetails.html',
+        controller: 'SiteDetailsCtrl'
       })
       .state('nearby', {
         url: '/nearby',
