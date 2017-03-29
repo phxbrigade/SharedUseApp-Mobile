@@ -32,11 +32,11 @@
     <!-- More END -->
 
     <!-- Event Lists START -->
-    <div class="list card">
+    <div class="list ">
       <div class="item text-center">
-        Nearby Community Sites
+        <b>Nearby Community Sites</b>
       </div>
-      <a ng-repeat="site in sites | orderBy: 'name'" class="item item-thumbnail-left" ng-href="/#/site/{{site.siteId}}">
+      <a ng-repeat="site in sites | orderBy: 'name'" class="item item-thumbnail-left" ng-href="/#/site/{{site.siteId}}/{{site.name}}">
         <img ng-src="{{site.img || 'img/no-image2.png'}}"/>
         <h2>{{site.name}}</h2>
         <p>{{site.type}}</p>
